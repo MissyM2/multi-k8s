@@ -7,7 +7,7 @@ before_install:
   - docker build -t missym2/react-test -f./client/Dockerfile.dev ./client
 
 script:
- - docker run -e CI=true missym2/react-test npm test
+  - docker run -e CI=true missym2/react-test npm test
 
 after_success:
   - docker build -t missym2/multi-client ./client
@@ -17,8 +17,9 @@ after_success:
 
 # first log in to Docker CLI
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
 # take images and push them to docker hub
- - docker push missym2/multi-client
- - docker push missym2/multi-nginx
- - docker push missym2/multi-server
- - docker push missym2/multi-worker
+  - docker push missym2/multi-client
+  - docker push missym2/multi-nginx
+  - docker push missym2/multi-server
+  - docker push missym2/multi-worker
