@@ -17,7 +17,7 @@
         },
         {
             "name": "worker",
-            "image":"missy/multi-worker",
+            "image":"missym2/multi-worker",
             "hostname":"worker",
             "essential":false,
             "memory": 128
