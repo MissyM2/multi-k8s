@@ -16,7 +16,7 @@ after_success:
   - docker build -t missym2/multi-worker ./worker
 
 # first log in to Docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
 
 
 # take images and push them to docker hub
