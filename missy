@@ -1,4 +1,0 @@
-database name: fibvalues
-id: postgres
-password: postgresspassword
-security group name: multi-docker-security-group
