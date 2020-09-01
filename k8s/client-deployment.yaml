@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-Deployment
+  name: client-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
       component: web
-  templagte:
+  template:
     metadata:
       labels:
         component: web
     spec:
       containers:
         - name: client
-          image: stephengrider/multi-client
-
-  
+          image: missym2/multi-client
+          ports:
+            - containerPort: 3000
