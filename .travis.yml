@@ -21,7 +21,7 @@ script:
   - docker run -e CI=true missym2/react-test npm test
 
 deploy:
-  - provider: script
-  - script: bash ./deploy.sh
+  provider: script
+  script: bash ./deploy.sh
   on:
     branch: master
